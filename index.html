@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="theme-color"  content="width=device-width, initial-scale=1.0" theme-color="#343a40">
+
+    <title>AvniPublications</title>
+    <link rel="icon" type="image/png" href="favicon.ico">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <style>
+   /* Navbar styling */
+.navh {
+    height: 80px;
+    padding: 10px 0;
+}
+
+/* Ensuring h2 doesn't overflow */
+.navbar-brand h2 {
+    font-size: 1.5rem;
+    line-height: 1.2;
+    margin: 0;
+}
+
+/* Nav Links Animation */
+.navbar-nav .nav-link {
+    position: relative;
+    transition: color 0.3s ease-in-out;
+}
+
+/* Hover effect on navbar links */
+.navbar-nav .nav-link:hover {
+    color: #f8d210 !important; /* Change text color on hover */
+}
+
+/* Button Animation */
+.navbar-nav .nav-link {
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+.navbar-nav .nav-link:hover {
+    transform: scale(1.1); /* Slight zoom effect */
+    background: rgba(255, 255, 255, 0.2); /* Subtle glow */
+}
+
+/* Adjustments for small screens */
+@media (max-width: 768px) {
+    .navh {
+        height: auto;
+        padding: 5px 0;
+    }
+
+    .navbar-brand h2 {
+        font-size: 1.2rem;
+    }
+}
+
+
+        .image-div {
+            min-height: 90vh;
+            margin-top: 80px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+        }
+        .image-container {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            background: #f8f9fa;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+            margin-bottom: 20px;
+        }
+        .image {
+            border-radius: 50%;
+            width: 180px;
+            height: 180px;
+            object-fit: cover;
+        }
+        .image-container::after {
+            content: '';
+            position: absolute;
+            top: 5px;
+            left: 5px;
+            right: 5px;
+            bottom: 5px;
+            border-radius: 50%;
+            border: 3px solid transparent;
+            animation: borderAnimation 3s infinite;
+        }
+        @keyframes borderAnimation {
+            0%, 100% { border-color: transparent; }
+            50% { border-color: #15ff00; }
+        }
+        /* WhatsApp Floating Button */
+        .whatsapp-btn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #25D366;
+            color: white;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+            text-decoration: none;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease-in-out;
+        }
+        .whatsapp-btn:hover {
+            transform: scale(1.1);
+             box-shadow: 0px 4px 10px 10px rgba(25, 207, 18, 0.3);
+        }
+        .about-comapny {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .about-section {
+            padding: 60px 20px;
+            background-color: #f8f9fa;
+            text-align: center;
+        }
+        .experience-counter {
+            font-size: 40px;
+            font-weight: bold;
+            color: #15ff00;
+        }
+        .album-section {
+            padding: 60px 20px;
+            text-align: center;
+            background-color: #ffffff;
+        }
+        .album-img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        .album-section {
+    padding: 60px 20px;
+    background-color: #ffffff;
+}
+.album-img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+.card {
+            transition: transform 0.3s ease-in-out;
+        }
+        .card:hover {
+            transform: scale(1.05);
+        }
+        .card img {
+            height: 200px;
+            object-fit: cover;
+        }
+        .container {
+            padding: 50px 0;
+        }
+        h2 {
+            font-weight: bold;
+        }
+        /* Footer Styles */
+/* Footer Styles */
+footer {
+    background: #222;
+    color: white;
+    padding: 50px 0;
+}
+
+/* Footer Links Hover Animation */
+footer a {
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
+
+footer a:hover {
+    color: #f8d210; /* Highlight color */
+    text-decoration: underline;
+}
+
+/* Email Color Change */
+footer p a[href^="mailto"] {
+    color: #ff6347; /* Tomato color for email */
+    font-weight: bold;
+}
+
+footer p a[href^="mailto"]:hover {
+    color: #ff4500; /* Darker shade on hover */
+}
+
+/* Social Icons Hover Effect */
+.social-logo {
+    transition: transform 0.3s ease-in-out;
+}
+
+.social-logo:hover {
+    transform: scale(1.2); /* Slight zoom effect */
+}
+
+/* Quick Links Hover Effect */
+.quick-links p a {
+    display: inline-block;
+}
+
+.quick-links p a:hover {
+    transform: translateX(3px); /* Subtle slide effect */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    footer {
+        text-align: center;
+    }
+
+    .social-logo {
+        margin: 10px;
+    }
+}
+
+
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-md navbar-dark bg-primary fixed-top navh">
+        <div class="container">
+            <!-- Brand -->
+            <a class="navbar-brand text-white" href="#">
+                <h2 class="mb-0">Avni✒️ <br><span class="small">Publications</span></h2>
+            </a>
+    
+            <!-- Navbar Toggler for Mobile -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+    
+            <!-- Navbar Items -->
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+
+    
+    <div class="image-div container">
+        <div class="image-container">
+            <img class="image" src="book-writing-landscape.png" alt="Book Writing">
+        </div>
+        <h2 class="text-success">~ Work with AvniPublications</h2>
+        <h1>Your success is <br> our success.</h1>
+        <p>"Every blank page holds a new world waiting to be written. Let your words shape stories that inspire and endure."</p>
+        <a href="" role="button" class="btn btn-primary WhatsApp-btn">WhatsApp Support↗</a>
+        <a href="https://wa.me/7597039129?text=Hello%2C%20I%20need%20support!" target="_blank" class="whatsapp-btn">
+            📲
+        </a>
+    </div>
+
+   
+    <section>
+        <div class="container">
+            <h2 class="text-center mb-4">Our Services</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card">
+                        <img src="how-to-write-a-book-review-featured-2.png" class="card-img-top" alt="Book Writing">
+                        <div class="card-body">
+                            <h5 class="card-title">Book Writing</h5>
+                            <p class="card-text">We offer professional book writing services to help authors bring their ideas to life.</p>
+                            <a href="https://wa.me/7597039129?text=Hello%2C%20I%20need%20support!" role="button" class="btn btn-primary">Learn More</a> 
+                        </div>
+                    </div>    
+                </div>
+                
+                <div class="col-md-6">
+                    <div class="card">
+                        <img src="provide-amazing-proofreading-and-editing-services.jpg" class="card-img-top" alt="Editing Services">
+                        <div class="card-body">
+                            <h5 class="card-title">Editing Services</h5>
+                            <p class="card-text">Our editing services ensure your manuscript is polished and ready for publication.</p>
+                            <a href="https://wa.me/7597039129?text=Hello%2C%20I%20need%20support!" role="button" class="btn btn-primary">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row mt-4">
+                <div class="col-md-6">
+                    <div class="card">
+                        <img src="book-cover-abstract-minimalist-art-soft-cover-book-design-poster-design-vector.jpg" class="card-img-top" alt="Cover Design">
+                        <div class="card-body">
+                            <h5 class="card-title">Cover Design</h5>
+                            <p class="card-text">We create eye-catching book covers that attract readers and reflect your story.</p>
+                            <a href="https://wa.me/7597039129?text=Hello%2C%20I%20need%20support!" role="button" class="btn btn-primary">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card">
+                        <img src="Marketing-Services-1.jpg" class="card-img-top" alt="Marketing Services">
+                        <div class="card-body">
+                            <h5 class="card-title">Marketing Services</h5>
+                            <p class="card-text">Our marketing services help you reach a wider audience and boost your book sales.</p>
+                            <a href="https://wa.me/7597039129?text=Hello%2C%20I%20need%20support!" role="button" class="btn btn-primary">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container" style="background-color: black; color: #ffffff;">
+            <div class="row mt-3" style="margin-left: 12px;">
+                <div class="col-ms-3" >
+                    <h5  >↪ SOLUTION FOR KONSAL </h5>
+                    <h1>Flexible Plans to Suit Your Needs</h1>
+                    <p>At World Book Publisher., we understand that each individual has unique requirements and preferences when it comes to their work arrangements. That's why we offer a range of flexible plans designed to cater to your specific needs.</p>
+                </div>
+                <div class="col-md-6">
+                    <img
+                    style="width: 400px; border-radius: 30px 0px 0px 30px;"
+                    src="Your-paragraph-text-19.png" alt="">
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <section>
+
+    <section class="about-section">
+        <div class="container">
+            <h2>About Us</h2>
+            <p>We are passionate about bringing stories to life through our publishing services. With a strong commitment to quality and creativity, we help authors transform their ideas into published works that inspire and engage readers.</p>
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="education-success-concept-businessman-pushing-abstract-arrow-colorful-books-sky-background-d-rendering-96106838.webp" alt="About Us" class="img-fluid rounded">
+                </div>
+                <div class="col-md-6 d-flex flex-column justify-content-center">
+                    <h3>Our Experience</h3>
+                    <p>With years of experience in the publishing industry, we have helped numerous authors achieve their dreams.</p>
+                    <p class="experience-counter">10+ Years of Experience</p>
+                </div>
+                <div class="col-sm-3 d-flex flex-column justify-content-center mt-3" style="color: white;">
+                    <a href="" role="button" class="btn btn-primary">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="album-section">
+        <div class="container">
+            <h6 class="text-center mb-4">~Finance Solution~</h6>
+            <h2 class="text-center mb-4 fw-bold ">Guiding Growth Driving<br> Success</h2>
+            
+            <div class="row">
+                <div class="col-md-6     mb-4" style="background: url(./th\ \(1\).jpg);">
+                    <h5>comfortable workspace</h5>
+                    <p>Experience the convenience of working from the comfort of your own home. <br>Our home-based job opportunity allows you to create your ideal workspace
+
+                    </p>
+                </div>
+                <div class="col-md-6 mb-4" style="background: url(./th\ \(1\).jpg);">
+                    <h5>Timely Distach and Delivery</h5>
+                    <p>We understand the importance of efficiency, which is why we ensure timely <br> dispatch and delivery of all project materials.</p>
+                </div>
+                <div class="col-md-6 mb-4" style="background: url(./th\ \(1\).jpg);">
+                    <h5>Clear Guidlines and instruction</h5>
+                    <p>Clarity is key to delivering exceptional work.<br> That's why we provide comprehensive guidelines and instructions with each project.</p>
+                </div>
+                <div class="col-md-6 mb-4" style="background: url(./th\ \(1\).jpg);">
+                    <h5>Ongoing Support and Commuction</h5>
+                    <p>We believe in fostering a supportive community.<br> As a part of our team, you'll have access to ongoing support and open communication channels.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <div class="container">
+    <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+        <div class="col">
+          <div class="card mb-4 rounded-3 shadow-sm border-primary">
+            <div class="card-header py-3 text-bg-primary border-primary">
+              <h4 class="my-0 fw-normal">👉15 day project</h4>
+            </div>
+            <div class="card-body">
+              <h1 class="card-title pricing-card-title">₹Salary-23000 / Payout<small class="text-body-secondary fw-light">/mo</small></h1>
+              <ul class="list-unstyled mt-3 mb-4">
+                <li>150 pages both sides in 15 days</li>
+                <li>registeration fees 1199rs</li>
+                <li>👉 available now according to day package</li>
+                <li>👉Salary process :- half salary received in advance and left salary received after complete project 👉Disclaimer :- 1... All material provide by us 2...parcel delivery and pickup service provide by us</li>
+              </ul>
+              <a href="https://wa.me/7597039129?text=Hello%2C%20I%20need%20support!" class="w-100 btn btn-lg btn-primary" role="button">Get started</a>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card mb-4 rounded-3 shadow-sm border-primary">
+            <div class="card-header py-3 text-bg-primary border-primary">
+              <h4 class="my-0 fw-normal">👉10 day project</h4>
+            </div>
+            <div class="card-body">
+              <h1 class="card-title pricing-card-title">₹Salary 17000 / Payout<small class="text-body-secondary fw-light">/mo</small></h1>
+              <ul class="list-unstyled mt-3 mb-4">
+                <li>Totally 100 pages both sides in 10 days</li>
+                <li>registeration fees 850rs</li>
+                <li>👉 available now according to day package .</li>
+                <li>👉Salary process :- half salary received in advance and left salary received after complete project 👉Disclaimer :- 1... All material provide by us 2...parcel delivery and pickup service provide by us</li>
+              </ul>
+              <a href="https://wa.me/7597039129?text=Hello%2C%20I%20need%20support!" class="w-100 btn btn-lg btn-primary" role="button">Get started</a>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card mb-4 rounded-3 shadow-sm border-primary">
+            <div class="card-header py-3 text-bg-primary border-primary">
+              <h4 class="my-0 fw-normal">👉7 day project</h4>
+            </div>
+            <div class="card-body">
+              <h1 class="card-title pricing-card-title">₹salary 12000 / Payout<small class="text-body-secondary fw-light">/mo</small></h1>
+              <ul class="list-unstyled mt-3 mb-4">
+                <li>Totally 49 Pages both sides in 7 days writing</li>
+                <li>registeration fees 699rs</li>
+                <li>👉 available now according to day package</li>
+                <li>👉Salary process :- half salary received in advance and left salary received after complete project👉Disclaimer :- 1... All material provide by us 2...parcel delivery and pickup service provide by us</li>
+              </ul>
+              <a href="https://wa.me/7597039129?text=Hello%2C%20I%20need%20support!" class="w-100 btn btn-lg btn-primary" role="button">Get started</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+      </section>
+    
+
+
+  <!-- Footer Section -->
+<footer class="bg-dark text-white pt-5 pb-4">
+    <div class="container text-center text-md-start">
+        <div class="row">
+            <!-- Company Info -->
+            <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mb-4">
+                <h5 class="fw-bold text-uppercase mb-4">Avni Publications</h5>
+                <p>We are passionate about bringing stories to life. Let's create something amazing together.</p>
+            </div>
+
+            <!-- Contact Us -->
+            <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mb-4">
+                <h5 class="fw-bold text-uppercase mb-4">Contact Us</h5>
+                <p><i class="fas fa-phone-alt me-2"></i> +91 7597039129</p>
+                <p><i class="fas fa-envelope me-2"></i> info@avnipublications.com</p>
+                <p><i class="fas fa-map-marker-alt me-2"></i> New Delhi, India</p>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mb-4">
+                <h5 class="fw-bold text-uppercase mb-4">Quick Links</h5>
+                <p><a href="#" class="text-white text-decoration-none">Home</a></p>
+                <p><a href="#" class="text-white text-decoration-none">About Us</a></p>
+                <p><a href="#" class="text-white text-decoration-none">Services</a></p>
+                <p><a href="https://wa.me/7597039129?text=Hello%2C%20I%20need%20support!" class="text-white text-decoration-none">Contact</a></p>
+            </div>
+
+            <!-- Social Media (Only Instagram & WhatsApp) -->
+            <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mb-4">
+                <h5 class="fw-bold text-uppercase mb-4">Follow Us</h5>
+                <a data-v-a1074260="" href="https://www.instagram.com/work_from_home_avni1?igsh=MWkxMHY5OG8wN3o4bQ==" class="app-grid-icon__image"><img data-v-a1074260="" srcset="https://img.icons8.com/?size=48&amp;id=ZRiAFreol5mE&amp;format=png 1x, https://img.icons8.com/?size=96&amp;id=ZRiAFreol5mE&amp;format=png 2x" width="48" height="48" alt="Instagram " class="loaded social-logo "><!----><a>
+                <a data-v-6f009fc7="" href="https://wa.me/7597039129?text=Hello%2C%20I%20need%20support!" class="app-grid-icon__image"><img data-v-6f009fc7="" srcset="https://img.icons8.com/?size=48&amp;id=16713&amp;format=png 1x, https://img.icons8.com/?size=96&amp;id=16713&amp;format=png 2x" width="48" height="48" alt="WhatsApp icon" class="loaded social-logo" ><!----><a/>
+            </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="text-center mt-3">
+            <p class="mb-0">&copy; 2014 Avni Publications. All Rights Reserved.</p>
+        </div>
+    </div>
+</footer>
+
+
+<!-- FontAwesome for Icons -->
+<script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
