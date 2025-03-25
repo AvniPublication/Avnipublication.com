@@ -236,6 +236,55 @@ footer p a[href^="mailto"]:hover {
 }
 
 
+
+/* rating */
+.carousel {
+            width: 400px;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            position: relative;
+        }
+        .profile-img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        .profile-name {
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        .comment {
+            font-size: 1rem;
+            color: #555;
+            margin-top: 10px;
+        }
+        .rating {
+            color: gold;
+            font-size: 1.5rem;
+            margin-top: 5px;
+        }
+        .buttons {
+            margin-top: 15px;
+        }
+        .btn {
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin: 5px;
+        }
+        .btn:hover {
+            background: #0056b3;
+        }
+
+
     </style>
 </head>
 <body>
@@ -269,9 +318,15 @@ footer p a[href^="mailto"]:hover {
         </div>
     </nav>
     
+<div class="container mt-5">
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+        <strong>Welcome!</strong> You should take help by whatsapp support!.
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
 
-    
-    <div class="image-div container">
+</div>
+
+    <div class="image-div container" style="background: url(th\ \(1\).jpg) no-repeat;">
         <div class="image-container">
             <img class="image" src="book-writing-landscape.png" alt="Book Writing">
         </div>
@@ -404,6 +459,8 @@ footer p a[href^="mailto"]:hover {
 
     
     <div class="container">
+        <h3 class="mb-5" style="background-color: #f8d210
+        ;">Suitable Jobs For You 👇🏻👇🏻</h3>
     <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
         <div class="col">
           <div class="card mb-4 rounded-3 shadow-sm border-primary">
@@ -460,7 +517,23 @@ footer p a[href^="mailto"]:hover {
       </div>
       </section>
     
+    
+<div class="container">
+    <h2 style="background-color: yellow;">Our Happy Workers</h2>
 
+</div>
+<div class="container " style="justify-content: center; align-items: center; display: flex;">
+    <div class="carousel">
+        <img id="profile-img" class="profile-img" src="profile.jpg" alt="Profile Picture">
+        <div id="profile-name" class="profile-name">D Jaat</div>
+        <div id="rating" class="rating">⭐⭐⭐⭐⭐</div>
+        <div id="comment" class="comment">"Great service! Highly recommend to everyone."</div>
+        <div class="buttons">
+            <button class="btn" onclick="prevFeedback()">Prev</button>
+            <button class="btn" onclick="nextFeedback()">Next</button>
+        </div>
+    </div>
+</div>
 
   <!-- Footer Section -->
 <footer class="bg-dark text-white pt-5 pb-4">
@@ -503,6 +576,40 @@ footer p a[href^="mailto"]:hover {
         </div>
     </div>
 </footer>
+
+
+<script>
+    const feedbacks = [
+        { img: "profile.jpg", name: "Lucky Choudhray", rating: "⭐⭐⭐⭐", comment: "sir muje phle trust nhi huaa fir jb maine apke whatsapp support se connect kiya or ab me apke sath work kar raha hu" },
+        { img: "profile.jpg", name: "Deepali Choudhary", rating: "⭐⭐⭐⭐⭐", comment: "Customer support was very helpful and kind." },
+        { img: "profile.jpg", name: "Rishi Sharma", rating: "⭐⭐⭐⭐⭐", comment: "sir muje apke sath work krte huye 4 months ho gye . its amzing team support" },
+        { img: "profile.jpg", name: "Kirti Sharma", rating: "⭐⭐⭐⭐⭐", comment: "sir muje apke sath work krte huye 8 months ho gye . or me ab achha kama rahi hu" },
+        { img: "profile.jpg", name: "Mohit Chuhan", rating: "⭐⭐⭐⭐", comment: "Amazing experience, will come back again!" },
+        { img: "profile.jpg", name: "Deepali Meena", rating: "⭐⭐⭐⭐⭐", comment: "team very kind. and mene first time work from home start kiya tha or me yha se achha khasa kma leti hu" },
+        { img: "profile.jpg", name: " Manisha Verma", rating: "⭐⭐⭐⭐⭐", comment: "jo bhi work frome home krna chahte hai vo please ek bar avni book pulication se jarur jude. its trustworthy website" },
+        { img: "profile.jpg", name: "Naresh Bohit", rating: "⭐⭐⭐⭐", comment: "meri collage ki fees maine dosto k sath milke uda di fir maine yha se work krke fees pay ki. or ab me work from home krta hu." },
+        { img: "profile.jpg", name: "Ashish sharma", rating: "⭐⭐⭐⭐⭐", comment: "me mera room rent or kharcha work from home se nikal leta hu its a trusy website and whatsapp support is best way to talk the team." }
+    ];
+
+    let currentIndex = 0;
+
+    function updateFeedback() {
+        document.getElementById("profile-img").src = feedbacks[currentIndex].img;
+        document.getElementById("profile-name").innerText = feedbacks[currentIndex].name;
+        document.getElementById("rating").innerText = feedbacks[currentIndex].rating;
+        document.getElementById("comment").innerText = `"${feedbacks[currentIndex].comment}"`;
+    }
+
+    function prevFeedback() {
+        currentIndex = (currentIndex - 1 + feedbacks.length) % feedbacks.length;
+        updateFeedback();
+    }
+
+    function nextFeedback() {
+        currentIndex = (currentIndex + 1) % feedbacks.length;
+        updateFeedback();
+    }
+</script>
 
 
 <!-- FontAwesome for Icons -->
