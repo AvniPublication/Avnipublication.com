@@ -99,6 +99,11 @@
             border: 3px solid transparent;
             animation: borderAnimation 3s infinite;
         }
+
+        .WhatsApp-btn{
+            width: 300px;
+            
+        }
         @keyframes borderAnimation {
             0%, 100% { border-color: transparent; }
             50% { border-color: #15ff00; }
@@ -107,11 +112,11 @@
         .whatsapp-btn {
             position: fixed;
             bottom: 20px;
-            right: 20px;
-            background-color: #25D366;
+            right: 30px;
+            background-color: #3125d3;
             color: white;
-            width: 80px;
-            height: 80px;
+            width: 110px;
+            height: 110px;
             border-radius: 50%;
             display: flex;
             justify-content: center;
@@ -123,7 +128,7 @@
         }
         .whatsapp-btn:hover {
             transform: scale(1.1);
-             box-shadow: 0px 4px 10px 10px rgba(25, 207, 18, 0.3);
+             box-shadow: 0px 4px 10px 10px #0d2ec44d;
         }
         .about-comapny {
             margin-top: 20px;
@@ -238,53 +243,43 @@ footer p a[href^="mailto"]:hover {
 
 
 
-/* rating */
-.carousel {
-            width: 400px;
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        /* Carousel */
+        .carousel-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* height: 100vh; */
+            margin-top: 50px;
+            margin-bottom: 30px;
+        }
+        .carousel-inner {
             text-align: center;
-            position: relative;
+        }
+        .testimonial {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+        }
+        .profile {
+            text-align: center;
         }
         .profile-img {
             width: 80px;
             height: 80px;
             border-radius: 50%;
-            object-fit: cover;
         }
         .profile-name {
-            font-size: 1.2rem;
             font-weight: bold;
-            margin-top: 10px;
-        }
-        .comment {
-            font-size: 1rem;
-            color: #555;
             margin-top: 10px;
         }
         .rating {
             color: gold;
-            font-size: 1.5rem;
+        }
+        .comment {
+            font-style: italic;
             margin-top: 5px;
         }
-        .buttons {
-            margin-top: 15px;
-        }
-        .btn {
-            background: #007bff;
-            color: white;
-            border: none;
-            padding: 8px 15px;
-            cursor: pointer;
-            border-radius: 5px;
-            margin: 5px;
-        }
-        .btn:hover {
-            background: #0056b3;
-        }
-
 
     </style>
 </head>
@@ -316,24 +311,93 @@ footer p a[href^="mailto"]:hover {
                     </li>
                 </ul>
             </div>
+            <div class="mx-1" >
+                <img src="profile.jpg" alt="sign in" style="width: 40px; height: 40px; border-radius: 50%;" onclick="window.location.href='https://wa.me/7597039129?text=Hello%2C%20I%20need%20support!';">     
+            </div>
         </div>
     </nav>
     
 
 
-    <div class="image-div container" style="background: url(th\ \(1\).jpg) no-repeat;">
+    <div class="image-div container" style="background-color: black;">
         <div class="image-container">
             <img class="image" src="book-writing-landscape.png" alt="Book Writing">
         </div>
-        <h2 class="text-success">~ Work with AvniPublications</h2>
-        <h1>Your success is <br> our success.</h1>
-        <p>"Every blank page holds a new world waiting to be written. Let your words shape stories that inspire and endure."</p>
+        <h2 class="text-primary">~ Work with AvniPublications</h2>
+        <h1 style="color: #f8f9fa;">Your success is <br> our success.</h1>
+        <p class="text-primary">"Every blank page holds a new world waiting to be written. Let your words shape stories that inspire and endure."</p>
         <a href="https://wa.me/7597039129?text=Hello%2C%20I%20need%20support!" role="button" class="btn btn-primary WhatsApp-btn">WhatsApp Support↗</a>
         <a href="https://wa.me/7597039129?text=Hello%2C%20I%20need%20support!" target="_blank" class="whatsapp-btn">
             📲
         </a>
     </div>
 
+    
+    <div class="container">
+        <h3 class="mb-5 mt-5" style="background-color: #f8d210
+        ;">Suitable Jobs For You 👇🏻👇🏻 <div class="spinner-grow text-primary" role="status">
+  <span class="">....👇🏻</span>
+</div></h3>
+    <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+        <div class="col">
+          <div class="card mb-4 rounded-3 shadow-sm border-primary">
+            <div class="card-header py-3 text-bg-primary border-primary">
+              <h4 class="my-0 fw-normal">👉15 day project</h4>
+            </div>
+            <div class="card-body">
+              <h1 class="card-title pricing-card-title">₹Salary-23000 / Payout<small class="text-body-secondary fw-light">/mo</small></h1>
+              <ul class="list-unstyled mt-3 mb-4">
+                <li>150 pages both sides in 15 days</li>
+                <li>registeration fees 1199rs</li>
+                <li>👉 available now according to day package</li>
+                <li>👉Salary process :- half salary received in advance and left salary received after complete project 👉Disclaimer :- 1... All material provide by us 2...parcel delivery and pickup service provide by us</li>
+              </ul>
+              <a href="https://wa.me/7597039129?text=Hello%2C%20I%20need%20support!" class="w-100 btn btn-lg btn-primary" role="button">Get started</a>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card mb-4 rounded-3 shadow-sm border-primary">
+            <div class="card-header py-3 text-bg-primary border-primary">
+              <h4 class="my-0 fw-normal">👉10 day project</h4>
+            </div>
+            <div class="card-body">
+              <h1 class="card-title pricing-card-title">₹Salary 17000 / Payout<small class="text-body-secondary fw-light">/mo</small></h1>
+              <ul class="list-unstyled mt-3 mb-4">
+                <li>Totally 100 pages both sides in 10 days</li>
+                <li>registeration fees 850rs</li>
+                <li>👉 available now according to day package .</li>
+                <li>👉Salary process :- half salary received in advance and left salary received after complete project 👉Disclaimer :- 1... All material provide by us 2...parcel delivery and pickup service provide by us</li>
+              </ul>
+              <a href="https://wa.me/7597039129?text=Hello%2C%20I%20need%20support!" class="w-100 btn btn-lg btn-primary" role="button">Get started</a>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card mb-4 rounded-3 shadow-sm border-primary">
+            <div class="card-header py-3 text-bg-primary border-primary">
+              <h4 class="my-0 fw-normal">👉7 day project</h4>
+            </div>
+            <div class="card-body">
+              <h1 class="card-title pricing-card-title">₹salary 12000 / Payout<small class="text-body-secondary fw-light">/mo</small></h1>
+              <ul class="list-unstyled mt-3 mb-4">
+                <li>Totally 49 Pages both sides in 7 days writing</li>
+                <li>registeration fees 699rs</li>
+                <li>👉 available now according to day package</li>
+                <li>👉Salary process :- half salary received in advance and left salary received after complete project👉Disclaimer :- 1... All material provide by us 2...parcel delivery and pickup service provide by us</li>
+              </ul>
+              <a href="https://wa.me/7597039129?text=Hello%2C%20I%20need%20support!" class="w-100 btn btn-lg btn-primary" role="button">Get started</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+      </section>
+
+
+      
+    
+    
    
     <section>
         <div class="container">
@@ -453,71 +517,11 @@ footer p a[href^="mailto"]:hover {
     </section>
 
     
-    <div class="container">
-        <h3 class="mb-5" style="background-color: #f8d210
-        ;">Suitable Jobs For You 👇🏻👇🏻</h3>
-    <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
-        <div class="col">
-          <div class="card mb-4 rounded-3 shadow-sm border-primary">
-            <div class="card-header py-3 text-bg-primary border-primary">
-              <h4 class="my-0 fw-normal">👉15 day project</h4>
-            </div>
-            <div class="card-body">
-              <h1 class="card-title pricing-card-title">₹Salary-23000 / Payout<small class="text-body-secondary fw-light">/mo</small></h1>
-              <ul class="list-unstyled mt-3 mb-4">
-                <li>150 pages both sides in 15 days</li>
-                <li>registeration fees 1199rs</li>
-                <li>👉 available now according to day package</li>
-                <li>👉Salary process :- half salary received in advance and left salary received after complete project 👉Disclaimer :- 1... All material provide by us 2...parcel delivery and pickup service provide by us</li>
-              </ul>
-              <a href="https://wa.me/7597039129?text=Hello%2C%20I%20need%20support!" class="w-100 btn btn-lg btn-primary" role="button">Get started</a>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card mb-4 rounded-3 shadow-sm border-primary">
-            <div class="card-header py-3 text-bg-primary border-primary">
-              <h4 class="my-0 fw-normal">👉10 day project</h4>
-            </div>
-            <div class="card-body">
-              <h1 class="card-title pricing-card-title">₹Salary 17000 / Payout<small class="text-body-secondary fw-light">/mo</small></h1>
-              <ul class="list-unstyled mt-3 mb-4">
-                <li>Totally 100 pages both sides in 10 days</li>
-                <li>registeration fees 850rs</li>
-                <li>👉 available now according to day package .</li>
-                <li>👉Salary process :- half salary received in advance and left salary received after complete project 👉Disclaimer :- 1... All material provide by us 2...parcel delivery and pickup service provide by us</li>
-              </ul>
-              <a href="https://wa.me/7597039129?text=Hello%2C%20I%20need%20support!" class="w-100 btn btn-lg btn-primary" role="button">Get started</a>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card mb-4 rounded-3 shadow-sm border-primary">
-            <div class="card-header py-3 text-bg-primary border-primary">
-              <h4 class="my-0 fw-normal">👉7 day project</h4>
-            </div>
-            <div class="card-body">
-              <h1 class="card-title pricing-card-title">₹salary 12000 / Payout<small class="text-body-secondary fw-light">/mo</small></h1>
-              <ul class="list-unstyled mt-3 mb-4">
-                <li>Totally 49 Pages both sides in 7 days writing</li>
-                <li>registeration fees 699rs</li>
-                <li>👉 available now according to day package</li>
-                <li>👉Salary process :- half salary received in advance and left salary received after complete project👉Disclaimer :- 1... All material provide by us 2...parcel delivery and pickup service provide by us</li>
-              </ul>
-              <a href="https://wa.me/7597039129?text=Hello%2C%20I%20need%20support!" class="w-100 btn btn-lg btn-primary" role="button">Get started</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      </div>
-      </section>
-    
-    
 <div class="container">
     <h2 style="background-color: yellow;">Our Happy Workers</h2>
 
 </div>
-<div class="container " style="justify-content: center; align-items: center; display: flex;">
+<!-- <div class="container " style="justify-content: center; align-items: center; display: flex;">
     <div class="carousel">
         <img id="profile-img" class="profile-img" src="profile.jpg" alt="Profile Picture">
         <div id="profile-name" class="profile-name">D Jaat</div>
@@ -528,8 +532,110 @@ footer p a[href^="mailto"]:hover {
             <button class="btn" onclick="nextFeedback()">Next</button>
         </div>
     </div>
-</div>
+</div> -->
 
+<div class="container carousel-container">
+    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel" style="background-color: black; color: white;">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="testimonial">
+                    <div class="profile">
+                        <img class="profile-img" src="profile.jpg" alt="Profile Picture">
+                        <div class="profile-name">D Jaat</div>
+                        <div class="rating">⭐⭐⭐⭐⭐</div>
+                        <div class="comment">"Great service! Highly recommend to everyone."</div>
+                    </div>
+                    <div class="profile">
+                        <img class="profile-img" src="profile.jpg" alt="Profile Picture">
+                        <div class="profile-name">Sunita Sharma</div>
+                        <div class="rating">⭐⭐⭐⭐⭐</div>
+                        <div class="comment">"Amazing experience, achhi bat ye hai ki half salary 5 days k andar dal dete hai"</div>
+                    </div>
+                    <div class="profile">
+                        <img class="profile-img" src="profile.jpg" alt="Profile Picture">
+                        <div class="profile-name">manisha kumari</div>
+                        <div class="rating">⭐⭐⭐⭐⭐</div>
+                        <div class="comment">"its my part time job and thanks to avni publications to contact and support to me."</div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="testimonial">
+                    <div class="profile">
+                        <img class="profile-img" src="profile.jpg" alt="Profile Picture">
+                        <div class="profile-name">vaishali jadeja</div>
+                        <div class="rating">⭐⭐⭐⭐⭐</div>
+                        <div class="comment">"i am lucky coz i got this job . beacuse its easy to apply and easy way to earn."</div>
+                    </div>
+                    <div class="profile">
+                        <img class="profile-img" src="profile.jpg" alt="Profile Picture">
+                        <div class="profile-name">Suman Sharma</div>
+                        <div class="rating">⭐⭐⭐⭐⭐</div>
+                        <div class="comment">"sir apka bhut dhanywad kyuki me isse apni jarurte puri kr leti hu iske liye muje ghar walo se paise mangme ki jaurrat nhi padti hai"</div>
+                    </div>
+                    <div class="profile">
+                        <img class="profile-img" src="profile.jpg" alt="Profile Picture">
+                        <div class="profile-name">Anchal manish singh</div>
+                        <div class="rating">⭐⭐⭐⭐⭐</div>
+                        <div class="comment">"its a good apportunity for me kyuki me isse apne husband ka hath bta deti hu jisse humere kharche maintain ho  jate h."</div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="testimonial">
+                    <div class="profile">
+                        <img class="profile-img" src="profile.jpg" alt="Profile Picture">
+                        <div class="profile-name">Rakesh meena</div>
+                        <div class="rating">⭐⭐⭐⭐⭐</div>
+                        <div class="comment">"sir muje phle trust nhi huaa fir jb maine apke whatsapp support se connect kiya or ab me apke sath work kar raha hu"</div>
+                    </div>
+                    <div class="profile">
+                        <img class="profile-img" src="profile.jpg" alt="Profile Picture">
+                        <div class="profile-name">Sonal Sharma</div>
+                        <div class="rating">⭐⭐⭐⭐</div>
+                        <div class="comment">"sir muje apke sath work krte huye 4 months ho gye . its amzing team support" </div>
+                    </div>
+                    <div class="profile">
+                        <img class="profile-img" src="profile.jpg" alt="Profile Picture">
+                        <div class="profile-name">Avni Singh</div>
+                        <div class="rating">⭐⭐⭐⭐⭐</div>
+                        <div class="comment">"team very kind. and mene first time work from home start kiya tha or me yha se achha khasa kma leti hu"</div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="testimonial">
+                    <div class="profile">
+                        <img class="profile-img" src="profile.jpg" alt="Profile Picture">
+                        <div class="profile-name">Deepanshi thakur</div>
+                        <div class="rating">⭐⭐⭐⭐⭐</div>
+                        <div class="comment">"jo bhi work frome home krna chahte hai vo please ek bar avni book pulication se jarur jude. its trustworthy website" </div>
+                    </div>
+                    <div class="profile">
+                        <img class="profile-img" src="profile.jpg" alt="Profile Picture">
+                        <div class="profile-name">Sushil Sharma</div>
+                        <div class="rating">⭐⭐⭐⭐</div>
+                        <div class="comment">"meri collage ki fees maine dosto k sath milke uda di fir maine yha se work krke fees pay ki. or ab me work from home krta hu." </div>
+                    </div>
+                    <div class="profile">
+                        <img class="profile-img" src="profile.jpg" alt="Profile Picture">
+                        <div class="profile-name">Arun Singh</div>
+                        <div class="rating">⭐⭐⭐⭐⭐</div>
+                        <div class="comment">"me mera room rent or kharcha work from home se nikal leta hu its a trusy website and whatsapp support is best way to talk the team."</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+</div>
   <!-- Footer Section -->
 <footer class="bg-dark text-white pt-5 pb-4">
     <div class="container text-center text-md-start">
